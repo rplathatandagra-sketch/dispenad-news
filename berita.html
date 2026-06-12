@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita - DispenAD News</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Desain Grid List Berita agar Rapi & Tidak Sempit Sebelah */
+        .grid-berita {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+            width: 100%;
+            margin-top: 20px;
+        }
+        .kartu-berita {
+            background: white;
+            border: 3px solid #16162a;
+            box-shadow: 4px 4px 0px #16162a;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .kartu-berita:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 8px 8px 0px #16162a;
+        }
+        .kartu-berita img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #16162a;
+        }
+        .kartu-body {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .kartu-meta {
+            font-size: 0.75rem;
+            color: #666;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .kartu-judul {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #16162a;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .kartu-ringkasan {
+            font-size: 0.85rem;
+            color: #444;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Dispen<span>AD</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="berita.html">BERITA</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+        <form class="search-box" action="#" method="GET">
+            <input type="text" placeholder="Cari berita..." name="search" required>
+            <button type="submit">🔍</button>
+        </form>
+    </header>
+
+    <div class="ticker-wrapper">
+        <div class="ticker-title">Berita Terkini</div>
+        <marquee class="ticker-text">Bumi Terus Mengirim Sinyal Bahaya, Lintaraya News Ucapkan Duka Cita Mendalam untuk Korban Bencana Alam | Akademi Kepolisian Semarang Buka Sesi Pelatihan SECATAM</marquee>
+    </div>
+
+    <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px; display: block; min-height: 60vh;">
+        <div class="section-title" id="page-title">Memuat Berita...</div>
+        
+        <div id="konten-area">
+            </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">Dispen<span>AD</span></div>
+            <div class="footer-info">UJI KINERJA ASAS | SMK PGRI 2 PONOROGO</div>
+        </div>
+        <div class="footer-bottom">
+           <p>&copy; 2026 Dispen AD. All Rights Reserved | Dikembangkan oleh Dinas Penerangan Angkatan Darat</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const idBerita = urlParams.get('id');
+        const kontenArea = document.getElementById('konten-area');
+        const pageTitle = document.getElementById('page-title');
+
+        let localNews = JSON.parse(localStorage.getItem("news")) || [];
+
+        if (idBerita) {
+            let berita = dataBerita[idBerita];
+            if (!berita) {
+                berita = localNews.find(item => item.id === idBerita);
+            }
+
+            if (berita) {
+                pageTitle.innerText = "Detail Berita";
+                document.title = berita.title + " - DispenAD News";
+                
+                kontenArea.innerHTML = `
+                    <div style="background: white; padding: 30px; border: 3px solid #16162a; box-shadow: 6px 6px 0px #16162a; box-sizing: border-box;">
+                        <div style="margin-bottom: 12px;">
+                            <span style="color: gray; font-size: 14px; font-weight: bold;">${berita.date}</span>
+                        </div>
+                        <h1 style="color: #16162a; margin-top: 5px; margin-bottom: 25px; line-height: 1.4; font-size: 26px; font-weight: 800;">${berita.title}</h1>
+                        <div style="margin-bottom: 25px; border: 3px solid #16162a;">
+                            <img src="${berita.image}" alt="Gambar Berita" style="width: 100%; max-height: 500px; object-fit: cover; display: block;">
+                        </div>
+                        <div style="font-size: 16px; line-height: 1.8; color: #222; text-align: justify;">
+                            ${berita.content}
+                        </div>
+                        <div style="margin-top: 35px;">
+                            <a href="berita.html" style="display: inline-block; padding: 10px 20px; background: #4B5320; color: white; text-decoration: none; font-weight: bold; border: 2px solid #16162a; box-shadow: 3px 3px 0px #16162a;">← Kembali ke Katalog Berita</a>
+                        </div>
+                    </div>
+                `;
+            } else {
+                pageTitle.innerText = "Berita Tidak Ditemukan";
+                kontenArea.innerHTML = "<p style='padding: 20px; font-weight:bold;'>Maaf, detail berita tidak ditemukan.</p>";
+            }
+
+        } else {
+            pageTitle.innerText = "Katalog Berita Terkini";
+            document.title = "Kumpulan Berita - DispenAD News";
+
+            let gridHTML = '<div class="grid-berita">';
+
+            for (let key in dataBerita) {
+                const b = dataBerita[key];
+                let ringkasan = b.content.replace(/<[^>]*>/g, '').substring(0, 110) + '...';
+                gridHTML += `
+                    <a href="berita.html?id=${key}" class="kartu-berita">
+                        <img src="${b.image}" alt="${b.title}">
+                        <div class="kartu-body">
+                            <span class="kartu-meta">${b.date}</span>
+                            <h3 class="kartu-judul">${b.title}</h3>
+                            <p class="kartu-ringkasan">${ringkasan}</p>
+                        </div>
+                    </a>
+                `;
+            }
+
+            localNews.forEach(function(b) {
+                let ringkasan = b.content.replace(/<[^>]*>/g, '').substring(0, 110) + '...';
+                gridHTML += `
+                    <a href="berita.html?id=${b.id}" class="kartu-berita">
+                        <img src="${b.image}" alt="${b.title}">
+                        <div class="kartu-body">
+                            <span class="kartu-meta">${b.date}</span>
+                            <h3 class="kartu-judul">${b.title}</h3>
+                            <p class="kartu-ringkasan">${ringkasan}</p>
+                        </div>
+                    </a>
+                `;
+            });
+
+            gridHTML += '</div>';
+            kontenArea.innerHTML = gridHTML;
+        }
+
+        document.querySelector('.search-box').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let kataKunci = this.querySelector('input').value.toLowerCase();
+            let kartuBerita = document.querySelectorAll('.kartu-berita');
+            let ditemukan = false;
+
+            if(kartuBerita.length > 0) {
+                kartuBerita.forEach(function(kartu) {
+                    if(kartu.textContent.toLowerCase().includes(kataKunci)) {
+                        kartu.style.display = '';
+                        ditemukan = true;
+                    } else {
+                        kartu.style.display = 'none';
+                    }
+                });
+                if(!ditemukan) alert('Berita tidak ditemukan!');
+            }
+        });
+    </script>
+</body>
+</html>

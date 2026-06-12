@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; 
+}
+
+body {
+    background-color: #f0f2f5;
+    background-image: 
+        linear-gradient(45deg, #e1e4e8 25%, transparent 25%), 
+        linear-gradient(-45deg, #e1e4e8 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #e1e4e8 75%), 
+        linear-gradient(-45deg, transparent 75%, #e1e4e8 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    color: #111111;
+    padding-bottom: 50px;
+}
+
+header h2, .logo, .section-title, .story-title, .rec-content h4, .ticker-title {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -0.3px;
+}
+
+header {
+    background: #ffffff;
+    padding: 1.2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px solid #16162a;
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    box-shadow: 4px 4px 0px #16162a;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #16162a;
+}
+
+.logo span {
+    color: #4B5320;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #16162a;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    background: #4B5320;
+    color: #ffffff;
+    border: 2px solid #16162a;
+    box-shadow: 2px 2px 0px #16162a;
+}
+
+.ticker-wrapper {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    border: 3px solid #16162a;
+    max-width: 1200px;
+    margin: 15px auto 0 auto;
+    box-shadow: 4px 4px 0px #16162a;
+}
+
+.ticker-title {
+    background: #4B5320;
+    color: white;
+    padding: 10px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-right: 3px solid #16162a;
+}
+
+.ticker-text {
+    padding: 0 15px;
+    color: #16162a;
+    font-weight: 600;
+}
+
+.news-container {
+    display: grid;
+    grid-template-columns: 2.6fr 1.4fr;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0;
+}
+
+.section-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background: #16162a;
+    padding: 10px 15px;
+    border: 3px solid #16162a;
+    border-bottom: none;
+    display: inline-block;
+}
+
+.story-table-container {
+    background: #ffffff;
+    border: 3px solid #16162a;
+    box-shadow: 6px 6px 0px rgba(22, 22, 42, 0.15);
+}
+
+.img-container-box {
+    border-bottom: 3px solid #16162a;
+    overflow: hidden;
+}
+
+.img-container-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.story-table-container:hover img {
+    transform: scale(1.02);
+}
+
+.text-row-cell {
+    padding: 15px 20px;
+    border-bottom: 2px solid #16162a;
+}
+
+.text-row-cell:last-child {
+    border-bottom: none;
+}
+
+.story-meta {
+    font-size: 0.8rem;
+    color: #555555;
+    font-weight: 600;
+}
+
+.story-title {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    color: #16162a;
+    font-weight: 800;
+}
+
+.story-table-container p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.sidebar-table-grid {
+    background: #ffffff;
+    border: 3px solid #16162a;
+    box-shadow: 6px 6px 0px rgba(22, 22, 42, 0.15);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-sub-header {
+    background: #4B5320;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border-bottom: 3px solid #16162a;
+}
+
+.rec-item-cell {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 2px solid #16162a;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.rec-item-cell:last-child {
+    border-bottom: none;
+}
+
+.rec-item-cell:hover {
+    background: #fdfdfd;
+}
+
+.rec-item-cell img {
+    width: 90px;
+    height: 65px;
+    object-fit: cover;
+    border: 2px solid #16162a;
+}
+
+.rec-content h4 {
+    font-size: 0.85rem;
+    color: #16162a;
+    line-height: 1.4;
+    margin-bottom: 5px;
+}
+
+.rec-content span {
+    font-size: 0.75rem;
+    color: #666666;
+    font-weight: 700;
+}
+
+footer {
+    background: #ffffff;
+    color: #16162a;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    border: 3px solid #16162a;
+    padding: 25px 20px;
+    box-shadow: 4px 4px 0px #16162a;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #16162a;
+    padding-bottom: 15px;
+}
+
+.footer-logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+.footer-logo span {
+    color: #4B5320;
+}
+
+.footer-info {
+    text-align: right;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #444444;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #16162a;
+    background: #ffffff;
+    box-shadow: 2px 2px 0px #16162a;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    padding: 6px 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    outline: none;
+    color: #16162a;
+    width: 150px;
+    transition: width 0.3s ease;
+}
+
+.search-box input:focus {
+    width: 200px;
+}
+
+.search-box button {
+    background: #4B5320;
+    border: none;
+    border-left: 2px solid #16162a;
+    color: #ffffff;
+    padding: 6px 10px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.search-box button:hover {
+    background: #ff2a5f;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    .news-container {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    header, footer, .ticker-wrapper {
+        margin: 10px 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .search-box {
+        margin-top: 10px;
+        width: 100%;
+        max-width: 300px;
+    }
+    .search-box input {
+        width: 100%;
+    }
+    .search-box input:focus {
+        width: 100%;
+    }
+}

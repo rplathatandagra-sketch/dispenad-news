@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saluran Berita - DispenAD News</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+        <div class="logo">Dispen<span>AD</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="berita.html">BERITA</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+            </ul>
+        </nav>
+
+        <form class="search-box" action="#" method="GET">
+            <input type="text" placeholder="Cari berita..." name="search" required>
+            <button type="submit">🔍</button>
+        </form>
+    </header>
+
+    <div class="ticker-wrapper">
+        <div class="ticker-title">Berita Terkini</div>
+        <marquee class="ticker-text">Bumi Terus Mengirim Sinyal Bahaya, Lintaraya News Ucapkan Duka Cita Mendalam untuk Korban Bencana Alam | Akademi Kepolisian Semarang Buka Sesi Pelatihan SECATAM</marquee>
+    </div>
+
+    <main class="news-container">
+        
+        <!-- MAIN STORY -->
+        <section class="main-story">
+            <div class="section-title">Main Story</div>
+            
+            <div class="story-table-container">
+                <!-- ID diatur ke 'dikmaba' agar saat diklik, halaman detail menampilkan berita dikmaba -->
+                <a href="berita.html?id=dikmaba" style="text-decoration: none; color: inherit; display: block;">
+                    <div class="img-container-box">
+                        <img src="img/Roblox_5_29_2026_8_17_09_PM.webp" alt="Main Story Image" style="width: 100%; display: block;">
+                    </div>
+                    
+                    <div class="text-row-cell">
+                        <span class="story-meta">Minggu, 08 Mar 2026 16:00 WIB - Oleh: Panitia</span>
+                    </div>
+                    
+                    <div class="text-row-cell">
+                        <h1 style="color: #030303; margin-left: 15px;" class="story-title">UPACARA PELANTIKAN SISWA DIKMABA</h1>
+                    </div>
+                </a>
+                
+                <div class="text-row-cell">
+                    <p>Akademi Militer akan menyelenggarakan Upacara Pelantikan Siswa Pendidikan Pertama Bintara (Dikmaba) pada Minggu, 8 Maret 2026, pukul 16.00 WIB bertempat di Lapangan Upacara Akademi Militer. Kegiatan ini merupakan salah satu rangkaian penting dalam proses pendidikan yang menandai pelantikan para siswa Dikmaba setelah menjalani tahapan pembinaan dan pelatihan...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SIDEBAR REKOMENDASI -->
+        <aside class="sidebar-news">
+            <div class="section-title">Berita Rekomendasi</div>
+            
+            <div class="sidebar-table-grid">
+                <div class="sidebar-sub-header">Saluran Terpopuler</div>
+                
+                <!-- Link diarahkan menggunakan parameter ID yang sesuai dengan database script.js -->
+                <a href="berita.html?id=polri" style="text-decoration: none; color: inherit;">
+                    <div class="rec-item-cell">
+                        <img src="https://picsum.photos/100/60?random=1" alt="Thumb">
+                        <div class="rec-content">
+                            <h4>Tujuh Siswa Lulus Seleksi Humas Polri, Pimpinan Beri Penghargaan...</h4>
+                            <span>Jumat, 05 Jun 2026</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="berita.html?id=bencana" style="text-decoration: none; color: inherit;">
+                    <div class="rec-item-cell">
+                        <img src="https://picsum.photos/100/60?random=2" alt="Thumb">
+                        <div class="rec-content">
+                            <h4>Bumi Terus Mengirim Sinyal Bahaya, Lintaraya News Ucapkan...</h4>
+                            <span>Jumat, 05 Jun 2026</span>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="berita.html?id=akpol" style="text-decoration: none; color: inherit;">
+                    <div class="rec-item-cell">
+                        <img src="https://picsum.photos/100/60?random=3" alt="Thumb">
+                        <div class="rec-content">
+                            <h4>Akademi Kepolisian Semarang Buka Sesi Pelatihan SECATAM...</h4>
+                            <span>Kamis, 19 Jun 2025</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">Dispen<span>AD</span></div>
+            <div class="footer-info">UJI KINERJA ASAS | SMK PGRI 2 PONOROGO</div>
+        </div>
+        <div class="footer-bottom">
+           <p>&copy; 2026 Dispen AD. All Rights Reserved | Dikembangkan oleh Dinas Penerangan Angkatan Darat</p>
+        </div>
+    </footer>
+
+    <!-- Script Fitur Pencarian di Halaman Utama -->
+    <script>
+        document.querySelector('.search-box').addEventListener('submit', function(e) {
+            e.preventDefault();
+            let kataKunci = this.querySelector('input').value.toLowerCase();
+            let mainStory = document.querySelector('.main-story');
+            let sidebarItems = document.querySelectorAll('.rec-item-cell');
+            let ditemukan = false;
+
+            if(mainStory.textContent.toLowerCase().includes(kataKunci)) {
+                mainStory.style.display = '';
+                ditemukan = true;
+            } else {
+                mainStory.style.display = 'none';
+            }
+
+            sidebarItems.forEach(function(item) {
+                if(item.textContent.toLowerCase().includes(kataKunci)) {
+                    item.closest('a').style.display = '';
+                    ditemukan = true;
+                } else {
+                    item.closest('a').style.display = 'none';
+                }
+            });
+
+            if (!ditemukan) {
+                alert('Informasi yang kamu cari tidak ditemukan!');
+            }
+        });
+    </script>
+</body>
+</html>
