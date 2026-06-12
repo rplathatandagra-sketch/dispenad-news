@@ -93,3 +93,18 @@ function addNews() {
     document.getElementById("image").value = "";
     document.getElementById("content").value = "";
 }   
+
+// Fungsi untuk menghapus berita berdasarkan ID
+function deleteNews(idUnik) {
+    if (confirm("Apakah Anda yakin ingin menghapus berita ini?")) {
+        // Filter out berita yang ingin dihapus dari array newsDynamic
+        newsDynamic = newsDynamic.filter(item => item.id !== idUnik);
+        
+        // Simpan perubahan ke Local Storage
+        save();
+        
+        alert("Berita berhasil dihapus!");
+        // Reload halaman untuk memperbarui tampilan katalog berita
+        window.location.reload();
+    }
+}
