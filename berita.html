@@ -167,23 +167,19 @@
             }
 
             localNews.forEach(function(b) {
-    let ringkasan = b.content.replace(/<[^>]*>/g, '').substring(0, 110) + '...';
-    gridHTML += `
-        <div class="kartu-berita-wrapper" style="position: relative; display: flex; flex-direction: column;">
-            <a href="berita.html?id=${b.id}" class="kartu-berita" style="height: 100%;">
-                <img src="${b.image}" alt="${b.title}">
-                <div class="kartu-body">
-                    <span class="kartu-meta">${b.date}</span>
-                    <h3 class="kartu-judul">${b.title}</h3>
-                    <p class="kartu-ringkasan">${ringkasan}</p>
-                </div>
-            </a>
-            <button onclick="deleteNews('${b.id}')" style="background: #ff4d4d; color: white; border: 2px solid #16162a; padding: 5px 10px; font-weight: bold; cursor: pointer; margin: 0 15px 15px 15px; box-shadow: 2px 2px 0px #16162a;">
-                🗑️ Hapus Berita
-            </button>
-        </div>
-    `;
-});
+                let ringkasan = b.content.replace(/<[^>]*>/g, '').substring(0, 110) + '...';
+                gridHTML += `
+                    <a href="berita.html?id=${b.id}" class="kartu-berita">
+                        <img src="${b.image}" alt="${b.title}">
+                        <div class="kartu-body">
+                            <span class="kartu-meta">${b.date}</span>
+                            <h3 class="kartu-judul">${b.title}</h3>
+                            <p class="kartu-ringkasan">${ringkasan}</p>
+                        </div>
+                    </a>
+                `;
+            });
+
 
             gridHTML += '</div>';
             kontenArea.innerHTML = gridHTML;
