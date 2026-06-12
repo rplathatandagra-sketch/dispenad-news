@@ -12,41 +12,45 @@ const dataBerita = {
             <p>Kehadiran seluruh personel juga diharapkan dapat meningkatkan partisipasi serta menjadi sarana evaluasi keaktifan anggota di setiap divisi. Dalam pelaksanaannya, siswa Dikmaba diwajibkan mengenakan PDU 4, personel AD menggunakan PDL dan baret sesuai divisi, Pati mengenakan PDU, sedangkan tamu dari pemerintahan diharapkan mengenakan pakaian formal. Upacara ini diharapkan dapat berlangsung dengan khidmat dan menjadi momentum penting dalam mencetak prajurit yang disiplin, profesional, dan siap mengemban tugas pengabdian kepada bangsa dan negara.</p>
         `
     },
-    "sultan": {
-        title: "Empat Sultan Mencoba dan Gagal, Sri Sultan Hamengkubuwono V Akhirnya Lahirkan Parlemen Pertama Keraton Ngayogyakarta Hadiningrat Roblox",
-        date: "Sabtu, 06 Jun 2026 22:40 WIB - Oleh: adeyid",
-        image: "img/Roblox_5_29_2026_8_17_09_PM.webp",
+   
+    "pomad": {
+        title: "PELANTIKAN SISWA POLISI MILITER ANGKATAN DARAT ROBLOX",
+        date: "Sabtu, 06 Jun 2026 - Oleh: DISPENAD",
+        image: "img/6_Juni_2026_20260606_230123_0000.png",
         content: `
-            <p><b>Yogyakarta</b> - Sri Sultan Hamengkubuwono V mengukir sejarah baru di dunia Roblox dengan berhasil membentuk parlemen keraton pertama. Langkah ini diambil setelah pembentukan sistem koding di dunia virtual mengalami kendala.</p>
-            <p>Pembentukan parlemen ini diharapkan mampu membawa stabilitas baru dan memberikan ruang bagi para pemain untuk ikut serta dalam menentukan arah kebijakan Keraton Ngayogyakarta Hadiningrat di platform tersebut.</p>
+            <p><b>Jakarta</b> - Pelantikan Siswa Polisi Militer Angkatan Darat (POMAD) Roblox berlangsung dengan khidmat pada Jumat, 5 Juni 2026 pukul 10.15 WIB. Acara ini menandai momen penting dalam perjalanan pendidikan para siswa POMAD yang telah melewati berbagai tahapan pembinaan dan pelatihan.</p>
+            <p>Acara pelantikan dihadiri oleh jajaran pimpinan, instruktur, serta tamu undangan dari berbagai satuan. Prosesi berlangsung dengan tertib, khidmat, dan penuh semangat, mencerminkan nilai-nilai disiplin, loyalitas, serta tanggung jawab yang menjadi pedoman utama bagi setiap anggota Polisi Militer Angkatan Darat.</p>
+            <p>Dalam kesempatan tersebut, Kapusdik dan Puspomad memberikan arahan kepada para anggota yang baru dilantik agar senantiasa aktif, profesional, dan bertanggung jawab dalam menjalankan tugas. Mereka juga menekankan pentingnya menjaga kehormatan satuan, menegakkan disiplin, serta menjadi teladan bagi seluruh personel di lingkungan TNI AD Roblox.</p>
+            <p>Pelantikan ini menandai berakhirnya masa pendidikan sekaligus menjadi awal pengabdian para siswa sebagai anggota Polisi Militer Angkatan Darat Roblox, Melalui pelantikan ini POMAD Roblox kembali menunjukkan komitmennya dalam membentuk personel yang disiplin, profesional, dan siap menjalankan tugas demi mendukung ketertiban serta kemajuan organisasi di masa mendatang.</p>
         `
     },
-    "polri": {
-        title: "Tujuh Siswa Lulus Seleksi Humas Polri, Pimpinan Beri Penghargaan Tinggi",
-        date: "Jumat, 05 Jun 2026 10:15 WIB - Oleh: Admin",
-        image: "https://picsum.photos/800/450?random=1",
+    "kostrad": {
+        title: "LATIHAN PRA-SATGAS YONIF 328 KOSTRAD TINGKATKAN KESIAPAN PRAJURIT HADAPI TUGAS OPERASI",
+        date: "Rabu, 10 Jun 2026  - Oleh: DISPENAD ",
+        image: "img/10_Juni_2026_20260611_120525_0000.png",
         content: `
-            <p><b>Jakarta</b> - Pimpinan Humas Polri memberikan penghargaan kepada tujuh siswa berprestasi yang berhasil melewati rangkaian seleksi ketat penerimaan anggota magang Humas Polri.</p>
-            <p>Dalam sambutannya, pimpinan menekankan pentingnya peran generasi muda dalam menjaga kualitas informasi di era digital, khususnya dalam menyebarkan berita yang akurat dan edukatif bagi masyarakat.</p>
+            <p><b>KOSTRAD</b> - Latihan pra-satgas Yonif 328 KOSTRAD digelar untuk meningkatkan kesiapan prajurit menghadapi tugas operasi.</p>
+            <p>Latihan dipimpin langsung oleh Komandan Batalyon Infanteri 328 Kostrad dan bertujuan untuk membentuk prajurit yang profesional, tangguh, disiplin, serta siap menjalankan setiap tugas yang diberikan. Berbagai skenario latihan dilaksanakan guna mengasah kemampuan taktis, kesiapsiagaan, serta ketepatan dalam mengambil keputusan di situasi yang dinamis.</p>
+            <p>Latihan dipimpin langsung oleh Komandan Batalyon Infanteri 328 Kostrad dan bertujuan untuk membentuk prajurit yang profesional, tangguh, disiplin, serta siap menjalankan setiap tugas yang diberikan. Berbagai skenario latihan dilaksanakan guna mengasah kemampuan taktis, kesiapsiagaan, serta ketepatan dalam mengambil keputusan di situasi yang dinamis.</p>
+            <p>Melalui kegiatan Latihan Pra-Satgas ini, diharapkan seluruh prajurit Yonif 328 Kostrad mampu meningkatkan kemampuan, kekompakan, dan semangat pengabdian sehingga dapat melaksanakan tugas operasi dengan optimal, serta senantiasa menjaga kehormatan satuan dalam setiap penugasan yang akan datang.</p>
         `
     },
-    "bencana": {
-        title: "Bumi Terus Mengirim Sinyal Bahaya, Lintaraya News Ucapkan Duka Cita Mendalam",
-        date: "Jumat, 05 Jun 2026 11:20 WIB - Oleh: Redaksi",
-        image: "https://picsum.photos/800/450?random=2",
+    
+    "kostrad": {
+        title: "PERESMIAN MARKAS (MAP) DIVISI INFANTERI 1 KOSTRAD RESMI DIGELAR",
+        date: "Sabtu, 06 Jun 2026 - Oleh: DISPENAD",
+        image: "img/6_Juni_2026_20260606_230627_0000.png",
         content: `
-            <p><b>Ponorogo</b> - Rentetan bencana alam yang terjadi belakangan ini menjadi alarm keras bagi kita semua mengenai kondisi bumi yang kian mengkhawatirkan.</p>
-            <p>Pihak Lintaraya News menyampaikan duka cita sedalam-dalamnya untuk seluruh korban yang terdampak, sekaligus mengajak masyarakat untuk lebih waspada dan menjaga lingkungan sekitar.</p>
-        `
+            <p><b>KOSTRAD</b> - Jakarta, 6 Juni 2026 KOSTRAD resmi menggelar peresmian markas (map) baru yang bernama Divisi Infanteri 1 pada Sabtu malam, 6 Juni 2026 pukul 20.00 WIB. Acara berlangsung dengan khidmat dan penuh semangat kebersamaan, dihadiri oleh personel dari berbagai satuan yang turut memberikan dukungan atas diresmikannya fasilitas baru tersebut.</p>
+            <p>Tidak hanya dihadiri oleh unsur KOSTRAD, kegiatan ini juga diikuti oleh perwakilan dari POMAD, Kopassus, Penerbad, hingga Dispenad. Kehadiran berbagai satuan tersebut menjadi simbol soliditas, sinergi, dan semangat kebersamaan antar unsur TNI AD dalam mendukung pengembangan sarana pembinaan personel.</p>
+            <p>Peresmian markas ditandai dengan pelaksanaan upacara serta sesi foto bersama yang melibatkan seluruh tamu undangan dan personel yang hadir. Dalam suasana penuh kekeluargaan, para peserta menyambut baik hadirnya markas baru yang dinilai memiliki fasilitas lengkap dan representatif untuk menunjang berbagai kegiatan satuan.</p>
+            <p>Markas baru Divisi Infanteri 1 Kostrad ini dibangun untuk mendukung berbagai kegiatan pembinaan dan latihan. Dengan fasilitas yang lengkap dan memadai, markas tersebut diharapkan mampu menjadi pusat pelatihan yang efektif guna meningkatkan kemampuan, disiplin, serta profesionalisme seluruh personel.</p>
+            <p>Dengan diresmikannya markas baru ini, KOSTRAD diharapkan semakin siap dalam melaksanakan berbagai program pembinaan dan pelatihan ke depan. Momen peresmian tersebut juga menjadi tonggak penting dalam upaya meningkatkan kualitas organisasi, mempererat hubungan antar satuan, serta memperkuat semangat pengabdian dan jiwa korsa seluruh prajurit.</p>
+         `
     },
-    "akpol": {
-        title: "Akademi Kepolisian Semarang Buka Sesi Pelatihan SECATAM",
-        date: "Kamis, 19 Jun 2025 09:00 WIB - Oleh: Humas Akpol",
-        image: "https://picsum.photos/800/450?random=3",
-        content: `
-            <p><b>Semarang</b> - Akademi Kepolisian (Akpol) Semarang secara resmi membuka sesi pelatihan SECATAM baru untuk meningkatkan kompetensi, kedisiplinan, serta ketahanan fisik para calon anggota pembela tanah air.</p>
-        `
-    }
+
+    
+    
 };
 
 // ===================================================
