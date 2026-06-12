@@ -5,7 +5,7 @@ const dataBerita = {
     "dikmaba": {
         title: "UPACARA PELANTIKAN SISWA DIKMABA",
         date: "Minggu, 08 Mar 2026 16:00 WIB - Oleh: Panitia",
-        image: "img/Roblox_5_29_2026_8_17_09_PM.webp",
+        image: "img/4_Juni_2026_Akademi_Militer_AKMIL_Roblox_melaksanakan_upacara_Pelantika_20260604_082903_0000.webp",
         content: `
             <p><b>Magelang</b> - Akademi Militer akan menyelenggarakan Upacara Pelantikan Siswa Pendidikan Pertama Bintara (Dikmaba) pada Minggu, 8 Maret 2026, pukul 16.00 WIB bertempat di Lapangan Upacara Akademi Militer.</p>
             <p>Kegiatan ini merupakan salah satu rangkaian penting dalam proses pendidikan yang menandai pelantikan para siswa Dikmaba setelah menjalani tahapan pembinaan dan pelatihan. Panitia mengundang para Perwira Tinggi (Pati), personel Angkatan Darat, tamu undangan, serta unsur pemerintahan untuk hadir dan memberikan dukungan dalam acara tersebut.</p>
@@ -16,7 +16,7 @@ const dataBerita = {
     "pomad": {
         title: "PELANTIKAN SISWA POLISI MILITER ANGKATAN DARAT ROBLOX",
         date: "Sabtu, 06 Jun 2026 - Oleh: DISPENAD",
-        image: "img/6_Juni_2026_20260606_230123_0000.png",
+        image: "img/6_Juni_2026_20260606_230123_0000.webp",
         content: `
             <p><b>Jakarta</b> - Pelantikan Siswa Polisi Militer Angkatan Darat (POMAD) Roblox berlangsung dengan khidmat pada Jumat, 5 Juni 2026 pukul 10.15 WIB. Acara ini menandai momen penting dalam perjalanan pendidikan para siswa POMAD yang telah melewati berbagai tahapan pembinaan dan pelatihan.</p>
             <p>Acara pelantikan dihadiri oleh jajaran pimpinan, instruktur, serta tamu undangan dari berbagai satuan. Prosesi berlangsung dengan tertib, khidmat, dan penuh semangat, mencerminkan nilai-nilai disiplin, loyalitas, serta tanggung jawab yang menjadi pedoman utama bagi setiap anggota Polisi Militer Angkatan Darat.</p>
@@ -27,7 +27,7 @@ const dataBerita = {
     "kostrad": {
         title: "LATIHAN PRA-SATGAS YONIF 328 KOSTRAD TINGKATKAN KESIAPAN PRAJURIT HADAPI TUGAS OPERASI",
         date: "Rabu, 10 Jun 2026  - Oleh: DISPENAD ",
-        image: "img/10_Juni_2026_20260611_120525_0000.png",
+        image: "img/10_Juni_2026_20260611_120525_0000.webp",
         content: `
             <p><b>KOSTRAD</b> - Latihan pra-satgas Yonif 328 KOSTRAD digelar untuk meningkatkan kesiapan prajurit menghadapi tugas operasi.</p>
             <p>Latihan dipimpin langsung oleh Komandan Batalyon Infanteri 328 Kostrad dan bertujuan untuk membentuk prajurit yang profesional, tangguh, disiplin, serta siap menjalankan setiap tugas yang diberikan. Berbagai skenario latihan dilaksanakan guna mengasah kemampuan taktis, kesiapsiagaan, serta ketepatan dalam mengambil keputusan di situasi yang dinamis.</p>
@@ -39,7 +39,7 @@ const dataBerita = {
     "kostrad": {
         title: "PERESMIAN MARKAS (MAP) DIVISI INFANTERI 1 KOSTRAD RESMI DIGELAR",
         date: "Sabtu, 06 Jun 2026 - Oleh: DISPENAD",
-        image: "img/6_Juni_2026_20260606_230627_0000.png",
+        image: "img/6_Juni_2026_20260606_230627_0000.webp",
         content: `
             <p><b>KOSTRAD</b> - Jakarta, 6 Juni 2026 KOSTRAD resmi menggelar peresmian markas (map) baru yang bernama Divisi Infanteri 1 pada Sabtu malam, 6 Juni 2026 pukul 20.00 WIB. Acara berlangsung dengan khidmat dan penuh semangat kebersamaan, dihadiri oleh personel dari berbagai satuan yang turut memberikan dukungan atas diresmikannya fasilitas baru tersebut.</p>
             <p>Tidak hanya dihadiri oleh unsur KOSTRAD, kegiatan ini juga diikuti oleh perwakilan dari POMAD, Kopassus, Penerbad, hingga Dispenad. Kehadiran berbagai satuan tersebut menjadi simbol soliditas, sinergi, dan semangat kebersamaan antar unsur TNI AD dalam mendukung pengembangan sarana pembinaan personel.</p>
@@ -92,4 +92,4 @@ function addNews() {
     document.getElementById("title").value = "";
     document.getElementById("image").value = "";
     document.getElementById("content").value = "";
-}
+}   
