@@ -1,71 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Admin - Tambah Berita</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        /* Desain Khusus Form Input Admin */
-        .form-container {
-            background: white;
-            border: 3px solid #16162a;
-            box-shadow: 6px 6px 0px #16162a;
-            padding: 30px;
-            margin-top: 20px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #16162a;
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #16162a;
-            font-size: 1rem;
-            outline: none;
-            box-sizing: border-box;
-        }
-        .form-group textarea {
-            height: 150px;
-            resize: vertical;
-        }
-        .btn-submit {
-            background: #4B5320;
-            color: white;
-            border: 3px solid #16162a;
-            padding: 12px 25px;
-            font-size: 1rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 3px 3px 0px #16162a;
-            transition: all 0.2s ease;
-        }
-        .btn-submit:hover {
-            transform: translate(-2px, -2px);
-            box-shadow: 5px 5px 0px #16162a;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">Dispen<span>AD</span></div>
-        <nav>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="berita.html">BERITA</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main class="news-container" style="max-width: 800px; margin: 40px auto; padding: 0 20px; display: block;">
+<main class="news-container" style="max-width: 800px; margin: 40px auto; padding: 0 20px; display: block;">
         <div class="section-title">Panel Admin - Tambah Berita Baru</div>
         
         <div class="form-container">
@@ -88,6 +21,9 @@
                 <button type="submit" class="btn-submit">Simpan & Publikasikan Berita</button>
             </form>
         </div>
+
+        <div class="section-title" style="margin-top: 40px;">Daftar Berita Kamu (Local Storage)</div>
+        <div id="list-berita-admin" style="margin-top: 20px;"></div>
     </main>
 
     <footer>
@@ -101,14 +37,44 @@
     <script>
         // Menangkap event submit saat tombol diklik
         document.getElementById('formBerita').addEventListener('submit', function(e) {
-            e.preventDefault(); // Mencegah halaman reload otomatis
-            
-            // Jalankan fungsi addNews bawaan dari script.js
+            e.preventDefault(); 
             addNews(); 
-            
-            // Reset form agar kosong kembali setelah berhasil menyimpan
             this.reset();
+            tampilkanListAdmin(); // Perbarui daftar setelah menambah berita
         });
+
+        // Fungsi baru untuk menampilkan daftar berita khusus di halaman admin
+        function tampilkanListAdmin() {
+            const listArea = document.getElementById('list-berita-admin');
+            let localNews = JSON.parse(localStorage.getItem("news")) || [];
+            
+            if (localNews.length === 0) {
+                listArea.innerHTML = "<p style='padding: 20px; background: white; border: 2px dashed #16162a; font-weight: bold; text-align: center;'>Belum ada berita yang kamu tambahkan.</p>";
+                return;
+            }
+
+            let htmlKoleksi = "";
+            localNews.forEach(function(b) {
+                htmlKoleksi += `
+                    <div style="background: white; border: 3px solid #16162a; box-shadow: 4px 4px 0px #16162a; margin-bottom: 15px; padding: 15px; display: flex; justify-content: space-between; align-items: center; gap: 15px;">
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <img src="${b.image}" style="width: 80px; height: 60px; object-fit: cover; border: 2px solid #16162a;">
+                            <div>
+                                <h4 style="margin: 0 0 5px 0; color: #16162a; font-size: 1rem;">${b.title}</h4>
+                                <small style="color: gray;">${b.date}</small>
+                            </div>
+                        </div>
+                        <button onclick="deleteNews('${b.id}')" style="background: #ff4d4d; color: white; border: 2px solid #16162a; padding: 8px 12px; font-weight: bold; cursor: pointer; box-shadow: 2px 2px 0px #16162a; white-space: nowrap;">
+                            🗑️ Hapus
+                        </button>
+                    </div>
+                `;
+            });
+            listArea.innerHTML = htmlKoleksi;
+        }
+
+        // Jalankan fungsi otomatis saat halaman admin dibuka
+        tampilkanListAdmin();
     </script>
 </body>
 </html>
