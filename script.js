@@ -36,7 +36,7 @@ const dataBerita = {
         `
     },
     
-    "kostrad": {
+    "kostrad-1": {
         title: "PERESMIAN MARKAS (MAP) DIVISI INFANTERI 1 KOSTRAD RESMI DIGELAR",
         date: "Sabtu, 06 Jun 2026 - Oleh: DISPENAD",
         image: "img/6_Juni_2026_20260606_230627_0000.webp",
