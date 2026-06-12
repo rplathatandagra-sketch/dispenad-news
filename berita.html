@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Berita - DispenAD News</title>
+
+    <meta property="og:site_name" content="DispenAD News" />
+    <meta property="og:title" content="Katalog Berita Terkini - DispenAD" />
+    <meta property="og:description" content="Klik untuk melihat kumpulan berita, pelantikan, serta laporan kegiatan terbaru dari satuan TNI AD." />
+    <meta property="og:image" content="img/6_Juni_2026_20260606_230627_0000.webp" />
+    <meta name="theme-color" content="#4B5320" />
+    
     <link rel="stylesheet" href="style.css">
+    
     <style>
-        /* Desain Grid List Berita agar Rapi & Tidak Sempit Sebelah */
         .grid-berita {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -79,19 +86,18 @@
 
     <div class="ticker-wrapper">
         <div class="ticker-title">Berita Terkini</div>
-        <marquee class="ticker-text">Menjadi Jembatan Informasi Tepercaya dan Pengawal Citra Positif TNI Angkatan Darat.</marquee>
+        <marquee class="ticker-text" scrollamount="5">DISPENAD: Menjadi Jembatan Informasi Tepercaya Pengawal Citra TNI AD | Akademi Kepolisian Semarang Buka Sesi Pelatihan SECATAM | Duka Mendalam untuk Korban Bencana Alam</marquee>
     </div>
 
     <main style="max-width: 1200px; margin: 40px auto; padding: 0 20px; display: block; min-height: 60vh;">
         <div class="section-title" id="page-title">Memuat Berita...</div>
-        
-        <div id="konten-area">
-            </div>
+        <div id="konten-area"></div>
     </main>
 
     <footer>
         <div class="footer-container">
             <div class="footer-logo">Dispen<span>AD</span></div>
+            <div class="footer-info">UJI KINERJA ASAS | SMK PGRI 2 PONOROGO</div>
         </div>
         <div class="footer-bottom">
            <p>&copy; 2026 Dispen AD. All Rights Reserved | Dikembangkan oleh Dinas Penerangan Angkatan Darat</p>
